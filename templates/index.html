@@ -132,7 +132,11 @@
                                 {% endif %}
                             </div>
                             <!-- Checkbox avec data-id unique pour localStorage -->
-                            <input type="checkbox" data-id="chk-{{ category }}-{{ loop.index0 }}">
+                            <input type="checkbox"
+                               data-id="chk-{{ (category + '-' + (item.get('Séance','')) + '-' + (item.get('Professeur',''))) 
+                                             | replace(' ', '_') 
+                                             | replace('é','e') 
+                                             | replace('.', '') }}">
                         </div>
                     {% endfor %}
                 </div>
