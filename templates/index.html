@@ -63,7 +63,7 @@
         }
 
         #list_cours button:hover {
-            background-color: #e01a1a;
+            background-color: #1a41e0;
             color: white;
         }
 
@@ -132,7 +132,7 @@
                                 {% endif %}
                             </div>
                             <!-- Checkbox avec data-id unique pour localStorage -->
-                            <input type="checkbox" data-id="chk-{{ (category + '-' + item.Séance + '-' + item.Professeur)|replace(' ', '_')|replace('é','e')|replace('.', '') }}">
+                            <input type="checkbox" data-id="chk-{{ category }}-{{ loop.index0 }}">
                         </div>
                     {% endfor %}
                 </div>
